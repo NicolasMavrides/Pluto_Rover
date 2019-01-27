@@ -1,6 +1,6 @@
-"# Pluto_Rover" 
+# Pluto Rover
 
-Rough idea and development steps:
+**Rough idea and development steps:**
 
 1. Program should store the planet grid as a multidimensional array (eg. a 2D array of 0s) 
 
@@ -16,9 +16,9 @@ Rough idea and development steps:
 6. Modify some random elements of the 2D array to specify whether there is an "obstacle" at that coordinate point (eg. if we have an array of 0s, change some random 0s 
    to 1s so that 0 = clear and 1 = obstacle). If the next coordinate point for the rover to move to is an obstacle, then skip the corresponding command.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 
-Further changes for improvement / Conclusions:
+**Further changes for improvement / Conclusions:**
 
 1. Make planet grid size customisable.
 
