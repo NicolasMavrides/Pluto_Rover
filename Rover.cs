@@ -25,24 +25,47 @@ namespace Pluto_Rover
         public int MoveNorth(Rover rover)
         {
             rover.yPos += 1;
+            if (rover.yPos > 99)
+            {
+                rover.yPos = 0;
+            }
+
             return yPos;
         }
 
         public int MoveSouth(Rover rover)
         {
             rover.yPos -= 1;
+
+            if (rover.yPos < 0)
+            {
+                rover.yPos = 99;
+            }
+
             return yPos;
         }
 
         public int MoveEast(Rover rover)
         {
             rover.xPos += 1;
+
+            if (rover.xPos > 99)
+            {
+                rover.xPos = 0;
+            }
+
             return xPos;
         }
 
         public int MoveWest(Rover rover)
         {
             rover.xPos -= 1;
+
+            if (rover.xPos < 0)
+            {
+                rover.xPos = 99;
+            }
+
             return xPos;
         }
 

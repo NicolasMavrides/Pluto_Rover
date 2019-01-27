@@ -61,6 +61,10 @@ namespace Pluto_Rover
                     roverHeading = headings[rover.headingNum];
                     Console.WriteLine("New rover position: " + rover.xPos + "," + rover.yPos + " and facing " + roverHeading);
                 }
+                else
+                {
+                    Console.WriteLine("Unknown command...");
+                }
 
                 command = Console.ReadLine();
             }
