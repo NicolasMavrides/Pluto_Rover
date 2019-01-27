@@ -8,13 +8,14 @@
 
 3. Start with a program that accepts a single character as input and performs a single move. Rover's position must be updated every time a command is issued.
 
-4. Implement the "wrapping" technique to account for the fact Pluto is a sphere (eg. if rover is at (0,99,'E') on a 100x100 grid and 'F' command is given,
-   new position should be (0,0,'E') ).
+4. Implement the "wrapping" technique to account for the fact Pluto is a sphere (eg. if rover is at (0,99,'N') on a 100x100 grid and 'F' command is given, new position should be (0,0,'N) ).
 
 5. Program should then be able to take a string input of custom size, and iterate over the input to execute one command at a time.
 
 6. Modify some random elements of the 2D array to specify whether there is an "obstacle" at that coordinate point (eg. if we have an array of 0s, change some random 0s 
    to 1s so that 0 = clear and 1 = obstacle). If the next coordinate point for the rover to move to is an obstacle, then skip the corresponding command.
+
+**Note:** Starting position of the rover in the program is (0,0) with heading North.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
