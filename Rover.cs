@@ -50,12 +50,26 @@ namespace Pluto_Rover
         public int TurnRight(Rover rover)
         {
             rover.headingNum += 1;
+
+            // prevent out of bounds error in the heading array by setting to 0 (ie. so if facing W, set to N which is the next heading)
+            if (rover.headingNum > 3)
+            {
+                rover.headingNum = 0;
+            }
+
             return rover.headingNum;
         }
 
         public int TurnLeft(Rover rover)
         {
             rover.headingNum -= 1;
+
+            // prevent out of bounds error in the heading array by setting to 3 (ie. so if facing N, set to W which is the next heading)
+            if (rover.headingNum < 0)
+            {
+                rover.headingNum = 3;
+            }
+
             return rover.headingNum;
         }
 
