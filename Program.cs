@@ -30,12 +30,22 @@ namespace Pluto_Rover
             {
                 if (command == "F")
                 {
-                    rover.MoveNorth(rover, rover.yPos);
+                    rover.MoveNorth(rover);
                     Console.Write("New rover position: "+rover.xPos + "," + rover.yPos+" and facing "+headings[rover.headingNum]);
                 }
                 else if (command == "B")
                 {
-                    rover.MoveSouth(rover, rover.yPos);
+                    rover.MoveSouth(rover);
+                    Console.Write("New rover position: " + rover.xPos + "," + rover.yPos + " and facing " + headings[rover.headingNum]);
+                }
+                else if (command == "R")
+                {
+                    rover.TurnRight(rover);
+                    Console.Write("New rover position: " + rover.xPos + "," + rover.yPos + " and facing " + headings[rover.headingNum]);
+                }
+                else if (command == "L")
+                {
+                    rover.TurnLeft(rover);
                     Console.Write("New rover position: " + rover.xPos + "," + rover.yPos + " and facing " + headings[rover.headingNum]);
                 }
 

@@ -22,32 +22,41 @@ namespace Pluto_Rover
         }
 
         // movement methods
-        public int MoveNorth(Rover rover, int yPos)
+        public int MoveNorth(Rover rover)
         {
-            yPos+= 1;
-            rover.yPos = yPos;
+            rover.yPos += 1;
             return yPos;
         }
 
-        public int MoveSouth(Rover rover, int yPos)
+        public int MoveSouth(Rover rover)
         {
-            yPos -= 1;
-            rover.yPos = yPos;
+            rover.yPos -= 1;
             return yPos;
         }
 
-        public int MoveEast(Rover rover, int xPos)
+        public int MoveEast(Rover rover)
         {
-            xPos += 1;
-            rover.xPos = xPos;
+            rover.xPos += 1;
             return xPos;
         }
 
-        public int MoveWest(Rover rover, int xPos)
+        public int MoveWest(Rover rover)
         {
-            xPos -= 1;
-            rover.xPos = xPos;
+            rover.xPos -= 1;
             return xPos;
+        }
+
+        // turn methods
+        public int TurnRight(Rover rover)
+        {
+            rover.headingNum += 1;
+            return rover.headingNum;
+        }
+
+        public int TurnLeft(Rover rover)
+        {
+            rover.headingNum -= 1;
+            return rover.headingNum;
         }
 
     }
