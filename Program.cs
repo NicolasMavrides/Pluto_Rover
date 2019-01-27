@@ -20,15 +20,27 @@ namespace Pluto_Rover
             // position headings for North, East, South and West, whose index numbers correspond to each (eg. 0 = N)
             String[] headings = { "N", "E", "S", "W" };
 
-            // rover object instance
+            // rover object instance. Starting position 0,0 and facing North
             Rover rover = new Rover(0, 0, 0);
-
             String roverHeading = headings[rover.headingNum];
 
-            Console.WriteLine("Coordinates of rover: ");
-            Console.WriteLine(rover.xPos);
-            Console.WriteLine(rover.yPos);
-            Console.WriteLine(roverHeading);
+            String command = Console.ReadLine();
+
+            while (command != "Q")
+            {
+                if (command == "F")
+                {
+                    rover.MoveNorth(rover, rover.yPos);
+                    Console.Write("New rover position: "+rover.xPos + "," + rover.yPos+" and facing "+headings[rover.headingNum]);
+                }
+                else if (command == "B")
+                {
+                    rover.MoveSouth(rover, rover.yPos);
+                    Console.Write("New rover position: " + rover.xPos + "," + rover.yPos + " and facing " + headings[rover.headingNum]);
+                }
+
+                command = Console.ReadLine();
+            }
 
         }
     }
